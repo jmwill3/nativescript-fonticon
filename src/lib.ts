@@ -13,7 +13,7 @@ export const mapCss = (data: any, debug?: boolean): object => {
       }
       for (let key of keys) {
         key = key.trim().slice(1).split(':before')[0];
-        map[key] = String.fromCharCode(parseInt(value.substring(2), 16));
+        map[key] = String.fromCodePoint(parseInt(value.substring(2), 16));
         if (debug) {
           console.log(`${key}: ${value}`);
         }
